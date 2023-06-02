@@ -1,0 +1,528 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[remotesensing,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+% \documentclass[journal,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, air, algorithms, allergies, alloys, analytica, analytics, anatomia, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coasts, coatings, colloids, colorants, commodities, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryptography, crystals, csmf, ctn, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entomology, entropy, environments, environsciproc, epidemiologia, epigenomes, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, foundations, fractalfract, fuels, future, futureinternet, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, grasses, gucdd, hazardousmatters, healthcare, hearts, hemato, hematolrep, heritage, higheredu, highthroughput, histories, horticulturae, hospitals, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijpb, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jcto, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jvd, jzbg, kidneydial, kinasesphosphatases, knowledge, land, languages, laws, life, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, microplastics, minerals, mining, modelling, molbank, molecules, mps, msf, mti, muscles, nanoenergyadv, nanomanufacturing,\gdef\@continuouspages{yes}} nanomaterials, ncrna, ndt, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, %%nri, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, %oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacoepidemiology,\gdef\@ISSN{2813-0618}\gdef\@continuous pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, publications, quantumrep, quaternary, qubs, radiation, reactions, receptors, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, signals, sinusitis, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, thermo, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, wem, wevj, wind, women, world, youth, zoonoticdis 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2023}
+\copyrightyear{2023}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{ } 
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For corrected papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Identification of Abandoned Logging Roads in Point Reyes National Seashore}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Title}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0003-1158-3830} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{XXX} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0001-7805-6272}
+
+
+% Authors, for the paper (add full first names)
+\Author{William T. Wiskes $^{1,}$*\orcidA{}, Leonhard Blesius $^{1}$ and Ellen Hines $^{1}$\orcidC{}}
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Firstname Lastname, Firstname Lastname and Firstname Lastname}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Lastname, F.; Lastname, F.; Lastname, F.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Department of Geography and Environment, San Francisco State University, San Francisco, 1600 Holloway Avenue, California 94132, USA}
+
+% Contact information of the corresponding author
+\corres{Correspondence: william.wiskes@usda.gov}
+
+
+% Current address and/or shared authorship
+% \firstnote{Current address: Affiliation 3.} 
+% \secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{Temporary roads are often placed in mountainous regions for logging purposes, but then never decommissioned and removed. These abandoned forest roads often have unwanted environmental consequences. They can lead to altered hydrological regimes, excess erosion and mass wasting events. These events can affect sediment budgets in streams, with negative consequences for anadromous fish populations. Maps of these roads are frequently non-existent; therefore, methods need to be created to identify and locate these roads for decommissioning. Abandoned logging roads in the Point Reyes National Seashore in California, an area partially under heavy forest canopy, were mapped using object-based image processing in concert with machine learning. High resolution Q1 LiDAR point clouds from 2019 were used to create a bare earth model of the region from which a slope model was derived. This slope model was then subjected to segmentation algorithms to identify and isolate regions of differing slope. Areas of differing slope were then used in a Convolutional Neural Network (CNN), and a maximum likelihood classifier to delineate the historic road network. The accuracy assessment was conducted using historic aerial photos of the state of the region post-logging, along with ground surveys to verify the presence of logging roads in areas of question. This method was successfully able to identify road networks with a precision of 0.991, and an accuracy of 0.992. It was also found that the CNN was able to identify areas of highest disturbance to the slope gradient. This methodology is a valuable tool to decision makers who need to identify areas of high disturbance in order to mitigate adverse effects.}
+
+% Keywords
+\keyword{LiDAR, object-based image analysis, image segmentation, CNN, machine learning, maximum likelihood classifier, feature extraction, aerial photos, forest roads, logging roads} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Advances in Respiratory Medicine
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+
+%\noindent This is an obligatory section in “Advances in Respiratory Medicine”, whose goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What is the implication of the main finding?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+%\usepackage{rotating}%sidewaystable
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setcounter{section}{-1} %% Remove this when starting to work on the template.
+% \section{How to Use this Template}
+
+% The template details the sections that can be used in a manuscript. Note that the order and names of article sections may differ from the requirements of the journal (e.g., the positioning of the Materials and Methods section). Please check the instructions on the authors' page of the journal to verify the correct order and names. For any questions, please contact the editorial office of the journal or support@mdpi.com. For LaTeX-related questions please contact latex@mdpi.com.%\endnote{This is an endnote.} % To use endnotes, please un-comment \printendnotes below (before References). Only journal Laws uses \footnote.
+
+% % The order of the section titles is different for some journals. Please refer to the "Instructions for Authors” on the journal homepage.
+
+\section{Introduction}
+
+Roads are often placed in wild, forested regions for a variety of reasons. Whether constructed for recreation, infrastructure, fire combat, or logging, these roads are often poorly documented, and their precise location may become lost due to infrequent use, changes in the morphology of the area, and vegetation encroachment \cite{becker, sherba}. This results in networks of roads many of which have become neglected, fragmented, and difficult to find for remediation purposes. Having maps of these historic lost roads is essential for decommissioning efforts \cite{white}.
+
+Abandoned forest roads, specifically abandoned logging roads, typically are composed of compacted soil \cite{rab}. This compacted soil can act as a semi-impervious surface and divert water flow from one watershed to another \cite{troendle}. Watersheds in forested regions are especially susceptible to mass wasting events and enhanced sediment flows in areas where the natural geomorphological processes have been disturbed \cite{luce}. Logging roads in forested regions can bring subsurface flow to the surface and accelerate erosion with overland flow \cite{underwood}, which can result in incisions into the natural landscape slope gradient. These incisions can provide a direct path for concentrated overland flow containing increased sediment loads to stream channels \cite{douglas}. This accelerated erosion can deposit fine sediment into the drainage basin and negatively affect fish habitat in streams. In summary, roads can limit infiltration, cause surface runoff, increase the rate of fine sediment production, and trigger mass wasting events \cite{wemple}. Increased sediment loads in watersheds have been shown to affect the ecological composition of many forest species \cite{wong}. 
+
+In the Point Reyes National Seashore 154 different fish species are known to utilize the aquatic habitat \cite{kelly}. Two of these have been listed as species of special concern: the coho salmon ({\it Oncorhynchus kissutch}), and steelhead trout ({\it Oncorhynchus mykiss irideus}) \cite{ketcham}. These are anadromous fish who depend entirely on gravely freshwater stream beds for habitat and breeding success \cite{gronsdahl}. Logging roads are known to affect the spawning rates and habitat suitability in anadromous fish populations \cite{jacob}, primarily because logging roads increase fine sediment loads to stream channels and decrease amounts of available gravel \cite{baxter}. Increased sediment flow into stream beds from logging roads can persist up to 80 years past the logging event \cite{moore}, showing the need to identify these roads despite their age. Decommissioning roads has been found to return sediment loads to their natural levels \cite{ahnert, douglas}. Identifying and removing sources of high sediment loads should be a priority for any habitat remediation project for these sensitive species \cite{gronsdahl, jacob}.  
+
+Much research has been done to identify roads from both imagery and light detection and ranging (LiDAR) point clouds \cite{li, yong, lillesand, mena, wang, white, yucong}, but there is limited work identifying logging roads under vegetation \cite{sherba}. Dense vegetation obscures the chance of road identification from aerial or satellite imagery \cite{wang} whereas LiDAR has the ability to penetrate through canopy and gather an accurate 3d interpretation of the ground underneath \cite{stoker}. However, because logging roads are often dirt or gravel means that uniform features, such as curb height \cite{li} or intensity \cite{yong}, that would traditionally be used in processes meant for extracting road forms from LiDAR, cannot be used. Additionally, logging road networks often become highly fragmented over time, making the extraction of complete road networks more difficult. 
+
+Object-based image analysis (OBIA) is the process of clustering pixels into regions that correspond to “individual surfaces, objects, or natural parts of objects” \cite[p.~576]{preetha}. This contrasts with the more traditional pixel-based methods where the spectral signature of the pixel alone is the primarily consideration, typically neglecting spatial aspects such as the size and shape of the area being classified, or topological relationships \cite{khatami}. This often results in 'salt and pepper' classifications, where classes overlap, mix, and cause errors \cite{lu}. OBIA has been shown to perform with a higher accuracy, primarily because, in addition to spectral values, OBIA can also focus on objects shape relative to the scene as well as the objects texture and proximity to other objects \cite{karami}.
+
+Convolutional Neural Networks (CNN) are a machine learning method which has shown great promise in remote sensing in recent years, especially in conjunction with object-based image analysis \cite{ferreira}. CNNs have been used to improve image classifications through their ability to automatically extract spatial patterns of images using a set of convolution and pooling operations to learn specific objects’ characteristics \cite{zhang}. This can be an especially accurate tool when combined with OBIA \cite{martins}. OBIA’s ability to preserve objects and edges, when integrated with CNNs, can be used to generate robust, consistent, and fully automated classifications \cite{robson}.
+
+When acquiring LiDAR for road detection purposes, a high point density is required in heavily forested regions. While some studies have experimented with using LiDAR files with as few as 6 pulses/m$^2$ \cite{white} it should be noted that the roads in question were not abandoned or in dense forests, therefore detecting them was less of a problem. Maintained roads reflect back more LiDAR points because of lack of ground and canopy vegetation, and they tend to not be fragmented, which makes the detection and extraction process more straightforward \cite{li}. In addition, many studies have used intensity images derived from LiDAR to detect roads, although intensity has proven to be less useful for road detection when the roads are unpaved \cite{yong, white}.  
+
+Forested roads have more vegetation through which the LiDAR must penetrate to get an accurate ground return. Thus, unmaintained roads need considerably higher point density to be detected. Because of this it is recommended to have ideally more than 6 pulses/m$^2$ for densely vegetated regions \cite{sherba}. 
+
+It is the goal of this project to develop a set of segmentation and classification criteria to map abandoned, overgrown logging roads in Point Reyes National Seashore, California, using LiDAR point cloud tiles, OBIA and CNN. 
+
+These efforts in identifying abandoned logging roads will help add to the body of knowledge at the disposal of environmental planners aiming to remediate damaged habitat. Managers at Point Reyes National Seashore have identified this specific issue to be the top   priority on their list of management needs \cite{becker}.
+
+This work is building on Sherba et al (2014) \cite{sherba} through incorporating new machine learning techniques to improve classification accuracy, automate the process of identifying hilltop roads, and improve the process of filling in gaps in hillside road classification due to fragmentation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methods}
+\subsection{Research Area}
+
+Point Reyes National Seashore, located in Marin County, California, is approximately 50 km northwest of San Francisco (Figure \ref{fig1}). It was established in 1962 and is the only U.S. Park Service protected Seashore on the West Coast. The Park encompasses approximately 71,000 acres over more than 80 miles of coastline. Within the Park, 32,730 acres are designated wilderness or potential wilderness, constituting one of the most accessible wilderness areas in the country, and the only marine wilderness on the west coast of the continental United States \cite{council}.  
+
+The first lumber mill in the Point Reyes vicinity was built in Bolinas in 1851. By 1858 four mills were operating in the area. Logging continued in Point Reyes until the area was designated a National Seashore in 1962 \cite{livingston}. After the Seashore was established, the logged areas were subsequently left to naturalize \cite{becker}. 
+
+The study area is an area of 11.75 km$^2$ just south of Olema, California, and is representative of the logged regions of concern in Point Reyes National Seashore. This area was selected through discussion with National Park Service project leaders, specifically because the area was heavily logged, and no remediation effort has been attempted to decommission the roads \cite{becker}. This site is also the location of ongoing projects by National Seashore managers to understand the lasting effects of historic logging on the region \cite{becker}.
+
+Currently, this area is popular with hikers and has two major trails running through it. The Seashore is home to a variety of vegetation from shrubs to trees, but is predominately characterized by coastal douglas-fir {\it (Pseudotsuga menziesii var. menziesii)}, coast redwood {\it (Sequoia sempervirens)}, coast live oak {\it (Quercus agrifolia)}, tanoak {\it (Notholithocarpus densiflorus)}, and california bay {\it (Umbellularia californica)}.
+
+\begin{figure}[H]	
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\includegraphics[width=15 cm]{LayoutBrooks.png}
+\end{adjustwidth}
+\caption{The 11.75 $km^2$ study area is located in the Five Brooks region of the Point Reyes National Seashore. Sentinel 2 imagery from 16-10-2020.\label{fig1}}
+\end{figure}  
+
+\subsection{Types of Roads}
+Generally, logging roads within mountainous forested regions fall into two categories; those in a mid-slope position and those which follow or cross over ridge lines \cite{sherba}. Shown in Figure \ref{fig2} are examples of overgrown historic logging roads within the study area. Changes in the natural slope of the region are highlighted in red. Figure \ref{fig2}a shows a logging road in a mid-slope position and figure \ref{fig2}b a road in a ridge-top position. These roads manifest themselves differently in the data and it is important to recognize that, in order to extract complete road networks, these two road types must be approached separately.
+
+\begin{figure}[H]	
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\includegraphics[width=15 cm]{roadtypes.png}
+\end{adjustwidth}
+\caption{Two examples of abandoned logging roads present within the study area. Where location (\textbf{a}) depicts a sample area within the study area where a road has been placed in a mid-slope position. Location (\textbf{b}) depicts a road in a hill-top position. In photos on left, natural slope is shown in blue, incised logging roads are marked in red. In graphic on the right cross-sectional views of LiDAR taken of same location.\label{fig2}}
+\end{figure}  
+
+\subsection{Data}
+
+LiDAR tiles for Marin County were provided by the Golden Gate National Parks Conservancy \cite{becker}. These tiles have an area of 0.47 km$^2$ each and the study area is comprised of exactly 25 complete tiles. The highest resolution LiDAR available for the region was collected by Quantum Spatial between the dates of December 22, 2018, and March 15, 2019 in the format of High Resolution Q1 LiDAR \cite{quantum}. In this file, the average point cloud density of Marin is eight points per m$^2$, however, in the region of the study area the average density gets as high as sixteen points per m$^2$. High point cloud density is necessary for an accurate bare earth DEM, as a large percentage of the points are in a region as densely vegetated as Point Reyes \cite{sherba, white} are absorbed by vegetation.
+
+The LiDAR tiles were mosaicked together in ArcGIS \cite{esri} and then processed into a bare earth DEM from which a slope model was derived. These data were the primary input for the segmentation processes and object-based road identification using eCognition software \cite{ecog}. These steps are covered in subsequent sections.
+
+Historic aerial photos taken of the area in the 1960s were provided by the Point Reyes National Seashore Museum to be used in the accuracy assessment. These photos accurately show the area just after logging ceased \cite{becker}. The aerial photos were scanned at 1200dpi in a Charge-Coupled Device scanner and georeferenced in ArcGIS. 
+
+Sentinel 2 imagery from October 16th, 2020 at a resolution of 10m (figure~\ref{fig1}) was chosen to show the current general land cover of the region, although it was not used for analysis, because the logging roads have been completely revegetated, and are no longer visible using satellite imagery. However, the imagery demonstrates the current state of the region in comparison to the aerial photographs from the 1960s of post-logging, which were used in the accuracy assessment. In the Sentinel 2 imagery the area can be seen to be completely revegetated with all roads obfuscated from view (figure~\ref{fig1}). 
+\subsection{Data Preparation}
+
+The LiDAR point clouds were downloaded in the form of tiles from the Golden Gate National Parks Conservancy. These LiDAR tiles were then mosaicked together and filtered to only include ground points that have penetrated the canopy and struck ground. Then a digital elevation model (DEM) was derived from the ground-return-only LiDAR, which was then processed into a slope model.
+
+Logging roads present similarly in the data as, and are often confused with, streams and rivers in slope models \cite{sherba}. Therefore, it was necessary to create a stream layer with which to mask out stream features from analysis. This was achieved by using the DEM derived from the LiDAR to create a flow accumulation raster. It is from this that a stream network was generated, which was used to create a stream order map. This layer was buffered and masked out of the final logging road classification; objects falling within natural drainages were removed from analysis. Shown in figure~\ref{fig3} are the steps in the road extraction process which will be covered in the following sections.
+
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{workflow.png}
+\caption{Workflow from unprocessed LiDAR to extracted road network. \label{fig3}}
+\end{figure}    
+
+\subsection{Segmentation}
+
+The first step of object-based classification is the image segmentation process, where pixels are aggregated into groups based on their spectral and spatial patterns \cite{alon}. The goal of segmentation is to reduce heterogeneity and increase homogeneity of image objects \cite{naggar}. The image is broken down into primitive image objects using segmentation algorithms which cluster pixels together based on their relative spectral value, shape, and texture \cite{xu}. Using these primitive image objects, features within the scene can then be extracted \cite{naggar, xu}. Multi-resolution segmentation, within eCognition, has been shown to be one of the most effective methods to categorize complex landscape features into meaningful objects \cite{carreira, naggar, tab}. However, the scale, shape, and compactness parameters are typically determined in a heuristical manner. Scale refers to the size of image objects relative to the scene’s resolution \cite{duan, naggar}. Generally, to avoid over-segmentation or under-segmentation, a scale should be chosen which results in image objects that encompass the entirety of what is being attempted to classify \cite{duan, sherba}. Shape has two components, smoothness and compactness. Smoothness refers to the roughness of the edges of the image objects, compactness refers to the object’s length versus width \cite{naggar}. For this research, within a weight of 0.1 for shape, a compactness of 0.8, and a scale of 11 was found to be the best for this particular site under these particular conditions. These numbers are data-scale dependent and if this workflow were applied to LiDAR of a different quality, or a region whose morphology presented in a significantly different way, it is likely that these numbers would have to be adjusted. It is important to remember the goal of image segmentation is to break an image into homogeneous objects and that specific parameter weights are dependent on the range of values present in the input raster, as well as that raster’s resolution. In this situation we are particularly interested in arriving at objects which span the complete width of the roads (figure~\ref{fig4}). Segments that span the entire width of the object being classed can gather the spectral and spatial information of neighboring objects in OBIA \cite{duan, sherba, xu}. Within the study area, objects encompassing undisturbed hillslope areas have a higher slope value than roads which have been graded for logging equipment. With objects that span the entire width of the low-sloped roads it is possible to use the contextual information from neighboring high-sloped objects in the classification of the road objects. 
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{segment.png}
+\caption{A small subset of the training area after segmentation.  \label{fig4}}
+\end{figure}   
+
+
+\subsection{Initial classification and region growing}
+
+
+For this research, we considered two zones: one training-zone, for training the CNN-model, and one validation zone for applying the model to assess its performance independently of the training \cite{navulur, prakash}. The validation area was only used for the accuracy assessment stage of this study and was chosen from where there was historic aerial photo coverage that could be accurately georeferenced. The training area was chosen based on its coverage of different types of terrain and roads to ensure that road types from a variety of environmental conditions would be included in the model.
+
+Road objects were classified based not only on their own spectral signature, but also the signature of their neighbors, and other relationships such as size and shape. As depicted in Figure 2, the position of roads in the landscape determines how they can be detected in a slope model. Roads in a mid-slope position in most cases are of a low slope and bordered on either side by high slopes (figure~\ref{fig2}a). After classifying these initial road objects, they were expanded to encompass neighboring objects using region growing algorithms.
+
+Region growing is a method to classify image objects by first identifying a seed object within the segmented image, and then growing this seed into the desired segmented object through iterations of growing and merging regions \cite{benz}. In some road detection applications, it is known where the objects to be classified are located \cite{li}, which aids in the seeding process. This is typically followed by multiple iterations of region growing until the objects are classed. However, because not only the initial seed location must be known, but also when to stop the region growing, this requires significant expert knowledge of the region to be classified. This can be the most difficult part of creating an automated system of classification.
+
+In the case of abandoned logging roads, there are two additional problems: 1) it is not known where all the logging roads are located, and 2) the logging roads are highly fragmented and may no longer be connected due to changes in the geomorphology of the region. The latter point becomes a prohibitive complication if not every road fragment is seeded during the initial steps of the process \cite{li}. This process of seeding and growing is time consuming, can have a number of parameters to adjust, lacks standardized documentation, and can require significant time to develop effective methods to accomplish \cite{idrees}. 
+
+However, the object identification and seeding process can be fully automated through identifying specific features unique to the objects.   Road features are more   subtle than other types of objects extracted in OBIA, the highly pronounced features typically utilized to automatically seed the region are not present. Because of this it is required to use the almost imperceptible changes in the terrain that might be detectable in a slope model \cite{luca, erikson, sherba, zhen}.
+
+For this study, three classifications of the objects within the scene were used. Objects with a very high slope are not roads, and therefore these were assigned to the (1) ‘exclusion’ class. Next, all other objects within the scene were classified to the (2) ‘candidate’ class which may, or may not, be a road. Then these candidate objects   which had a low slope, but were bordered on either side by high slope, were classified as the (3) ‘road’ class. These road objects were then grown into   neighboring candidate objects who have a similar slope. Roads which were not captured by the road class ruleset were classified by their road-based slope characteristics and their connectivity to roads; road seed objects that had a high certainty of being roads were grown iteratively along low slope road pathways into areas of less certainty.   This method was utilized to avoid the miss-classification of other low slope areas (such as hilltops) as roads.  
+
+Complete coverage of all road objects was not achieved through this process, although a sampling of road objects from many different environments (hilltop and mid-slope) were found.  In general, Neural Networks are most successful if the dataset has a sampling of objects to be classified across the entirety of the environments in which they are present \cite{prakash}. These objects were then used as input samples to train the CNN machine learning algorithm.  
+
+\subsection{Training and applying the CNN}
+The road objects from the training subset were used as the input samples in a CNN. First 1000 samples points for each class (road, candidate, and exclusion) were taken from within their classified image objects  . Then the canvas was rotated by 30 degrees and another 1000 samples were taken for each class. This process was repeated iteratively until the map returned to start after 12 cycles. This rotation was implemented to increase the number of samples, as well as to ensure the resulting CNN did not spatially correlate the sample points to one another. This resulted in a total of 36,000 samples (12,000 for each class). This was then used to make a 3-layer convolutional neural network, consisting of a Convolutional, a Pooling, and a Fully Connected Layer. The convolutional layer is where features from the input to the CNN were extracted. The pooling layer then reduced the spatial volume of input image. The fully connected layer connected neurons in one layer to neurons in another layer to classify the image, where the neurons are computational units designed to find patterns in the pooling layer and whose numbers represent the number of pixels in the input image \cite{prakash}.
+
+The output of the CNN was one prediction layer for each input class in the form of a heatmap. A heatmap displays the magnitude of a phenomenon, in the case of CNNs, the values of the resulting heat maps directly represent the model’s prediction of the probability (from 0 to 1) of that class being present in a given area \cite{prakash, timilsina}. The resulting heat maps from the CNN were then used as an input to guide the classification of the image segments.
+
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{cnn.png}
+\caption{The output of the Convolutional Neural Network. Each color band corresponds to each one of the 3 classes present in the model. Red represents the areas of highest likelihood of being roads (road class); blue represents possible roads (candidate class); green highest likelihood of not being roads (exclusion class). \label{fig5}}
+\end{figure}   
+Shown in figure~\ref{fig5} is the resulting output of the Convolutional Neural Network in the validation area. The CNN created a one band heatmap for each of the three class types, these outputs were then stacked into a 3-band raster stack with each band (red, blue, green) corresponding to a classification parameter (road, candidate, exclusion). This raster stack is for visualization purposes to better understand and conceptualize the region being analyzed. This visualization’s purpose is to highlight areas with a high confidence of being roads compared to areas of exclusion or uncertainty.
+
+\subsection{Classifying and Extracting the Road Network}
+
+To reclassify the CNN, a threshold was set in the heatmap from which the features were extracted \cite{luca, prakash, timilsina}. These thresholds were extracted using the maximum likelihood classifier which designated which class an object in the scene belongs to. The maximum likelihood classifier calculates the probability that a given object belongs to a specific class based on defined membership curves, the value of the object being the mean of the pixels contained within it \cite{richards}. The fine-tuned membership function curves can be seen in figure~\ref{fig6}. An object was attributed to a specific class based on the highest value of the averaged pixels within the image object of the corresponding layer (road, candidate, exclusion) as defined by the CNN. Using this method, image segments with higher road heatmap values associated with them were classified as road, segments associated with the exclusion zone were classified as excluded, and candidate as candidate. Each object is assigned to the class that has the highest presence within the object. Image segments between these classes were classified based on the likelihood that they might belong to one class or another based on these curves (Figure~\ref{fig6}). These objects were then used to re-seed the image.
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\includegraphics[width=15.5cm]{membership.png}
+\end{adjustwidth}
+\caption{Membership functions in eCognition for maximum likelihood classifier from CNN heatmaps. Where (\textbf{a}) shows road membership. Item (\textbf{b}) depicts the candidate class for growing roads into. And (\textbf{c}) shows the exclusion class. \label{fig6}}
+\end{figure}  
+
+After classification road seed objects were grown iteratively along the pathways of the CNN to fill in classification gaps and identify hilltop roads until the network had been fully extracted. Since the CNN better identified road objects that were not evident in the slope model, a more complete and better connected road network could be obtained. Figure~\ref{fig7} illustrates the process of extracting this more complete road network. Figure ~\ref{fig7}(\textbf{a}) shows the initial segmentation, (\textbf{b}) depicts the initial classification, (\textbf{c}) shows the trained neural network, and (\textbf{d}) shows the growing process along neural network pathways. 
+
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{classify.png}
+\caption{ The road classification process. Where (\textbf{a}) shows initial segmentation. Item (\textbf{b}) depicts initial classification. Item (\textbf{c}) shows the trained neural network. Item (\textbf{d}) shows the growing process along neural network pathways. In items b through d, red represents the areas of highest likelihood of being roads (road class); blue represents possible roads (candidate class); green highest likelihood of not being roads (exclusion class).}\label{fig7}
+\end{figure}
+
+Next, an iterative growing and shrinking step was added to smooth the road network and prepare it for extraction. This resulting model did include both roads and rivers, but this was to be expected in this type of model \cite{sherba}, and therefore rivers were masked out using the stream order network described in the data preparation stage. In a final step, the road network polygons were skeletonized into a line type road-network and exported to a shapefile \cite{lewandowicz}. 
+\subsection{Accuracy Assessment}
+
+
+For an accuracy assessment in remote sensing studies, often the most common technique used is a ground survey, where the ground truthing is found through on-the-ground surveys and compared to the classified map. However, many of the logging roads in this project were so overgrown that accessing and verifying them on the ground was difficult or impossible. Historic aerial photos are a suitable alternative to ground surveys especially when the features being classed can be reliably extracted from imagery. Aerial photos also have the benefit of being a form of remotely sensed data that can be processed off site, which lowers costs and effort \cite{lillesand}.  
+
+In the case of abandoned logging roads, aerial photographs are an acceptable source of information on the state of the post-logging landscape. Aerial photos of the Point Reyes National Seashore from 1963 document the area just after logging had ceased \cite{becker}. The photos were georeferenced, and the road network was overlain and buffered with a 15 meters corridor as a tolerance due to possible geometric errors \cite{zhen}. Any accuracy assessment points falling within this buffer was considered a road. 
+
+Accuracy assessments consider misclassified points as either errors of omission (where a point is classified as non-road within the road network) or errors of commission (a point being classified as road outside of the road network) \cite{lillesand}. These errors were considered in the aerial imagery where vegetation has previously been removed and road/non-road areas could be clearly seen. The aerial photos post logging did still have some small areas obscured from view and therefore could not be vectorized properly in those regions. In these areas, where there was uncertainty as to the validity of the classified points, ground surveys were used instead. Thus, ground surveys were used in two instances: 1) the roads were obscured by vegetation, or 2) there was not photo coverage.
+
+This accuracy assessment only considered two classes, road and non-road.  A total of 500 accuracy assessment points were taken across these two classes within their feature areas \cite{guillen, lillesand}. A stratified random accuracy assessment was utilized where points are randomly distributed within each class, where each class had a number of points proportional to its relative area \cite{foody}. Errors of omission and commission were calculated with the final result being a confusion matrix whose values were used to calculate accuracy and precision.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+Depicted in figure~\ref{fig8} is the extracted road network overlain over a historic aerial photo of the region that was used for the accuracy assessment. Through simple visual inspection these road networks can still be reliably seen despite ~60 years of naturalization.
+
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{roads.png}
+\caption{The extracted road network overlain over a historic aerial photo of the region that was used in the accuracy assessment. \label{fig8}}
+\end{figure}   
+
+
+This research successfully extracted a significant vast majority of the forest roads within the study area. Within the validation area a total of 25.725 km of roads were extracted within a 1 km$^2$ area. 
+
+The confusion matrix results from the accuracy assessment are found in Table \ref{tab1}. Formulas used for calculating accuracy and precision can be found in Table \ref{tab2}. For this area a Kappa of 0.977 (Table \ref{tab1}), a precision of 0.991, and an accuracy of 0.992 were found (Table \ref{tab2}). Kappa values generally have been falling out of favor in the remote sensing community with a variety of other metrics taking their place \cite{guillen} (as shown in \ref{tab2}). Many recent image analysis papers have adopted using confusion matrix formulas in their results \cite{foody, guillen, papp, prakash, sivakumar, yang}. Since there is a lack of standardization between studies, to allow for comparison, all standard formulas have been included here.
+%%%
+\begin{table}[htb]
+\caption{Confusion matrix from accuracy assessment.}
+\label{tab1}
+\begin{center}
+\begin{tabular}{c||r|r|r|r|r}
+ & Roads & Non-Roads & Total & Accuracy & Kappa  \\ 
+\hline
+\hline
+\text{Roads} & 112 & 1 & 113 & 0.99115 \\
+\hline
+\text{Non-Roads} & 3 & 384 & 387 & 0.99225 \\
+\hline
+\text{Total} & 115 & 385 & 500 &  \\
+\hline
+\text{Accuracy} & 0.97391 & 0.99740 &  & 0.992  \\
+\hline
+\text{Kappa} & & & & & 0.97728 \\
+\end{tabular}
+\end{center}
+
+\end{table}
+
+% \usepackage{rotating}
+%\begin{sidewaystable}
+\begin{table}[htb]
+\caption{Formulas for understanding the confusion matrix results. TP = true positive. TN = true negative. FP = false positive. FN = false negative.}
+\label{tab2}
+\begin{center}
+\begin{tabular}{c|r|r}
+ Measure & Value & Derivations  \\ 
+\hline
+\hline
+\text{Sensitivity} & 0.9739 & TPR = TP / (TP + FN) \\
+\hline
+\text{Specificity} & 0.9974 & SPC = TN / (FP + TN)  \\
+\hline
+\text{Precision} & 0.9912 & PPV = TP / (TP + FP)   \\
+\hline
+\text{Negative Predictive Value} & 0.9922 & NPV = TN / (TN + FN)   \\
+\hline
+\text{False Positive Rate} & 0.0026 & FPR = FP / (FP + TN) \\
+\hline
+\text{False Discovery Rate} & 0.0088 & FDR = FP / (FP + TP) \\
+\hline
+\text{False Negative Rate} & 0.0261 & FNR = FN / (FN + TP) \\
+\hline
+\text{Accuracy} & 0.9920 & ACC = (TP + TN) / (TP + TN + FP + FN) \\
+\hline
+\text{F1 Score} & 0.9825 & F1 = 2TP / (2TP + FP + FN) \\
+\hline
+\text{Matthews Correlation Coefficient} & 0.9773 & TP*TN - FP*FN /\\ & & sqrt((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN)) \\
+
+\end{tabular}
+\end{center}
+\end{table}
+%\end{sidewaystable}
+%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+The goal of this study was to extract historic forest road networks out of LiDAR point clouds under heavy canopy. This work attempted to augment the currently used automated road extraction process to better capture hilltop roads and fill gaps in cutbank roads by investigating the use of CNNs to automate and improve OBIA accuracy.
+
+The results have shown that roads were able to accurately be identified in LiDAR using OBIA in conjunction with CNNs. Specifically, the results show that OBIA methods can be improved upon using CNNs. CNNs help to increase classification accuracy and automate the extraction methods that, in previous research, had to be processed using non-autonomous methods. The results of this study’s coupled CNN, OBIA approach have minimized these errors, improved classification accuracy, and captured hilltop roads.
+
+When looking at studies of similar areas, such as Sherba et al. (2014), pixel-based classification results show that the unsupervised classification of logging roads had a total accuracy of 78\%. They also found that the errors of commission occurred largely on ridgelines where large areas of low slope were present, and errors of omission occurred as gaps in the road network \cite{sherba}. In their paper, when a strictly fully automated OBIA approach was used, an initial classification accuracy of 86\% was found. Additionally, after extracting out misclassified drainages and incorporating in hand-digitized ridge roads, classification accuracy increased to 90\%.
+
+Sherba et al. (2014) classified their segmented slope model into two initial classes: roads which were considered ‘certain road objects’, and ‘road candidate objects’ which were roads only if they were near the initial road class. They then grew these road objects into the candidate object class to create a logging road map \cite{sherba}. A major difficulty in this workflow was the time-consuming nature of the task and the lack of automation in its identification of hilltop roads. In order to increase the practicality of road extraction methods this research effort has also added an exclusion class (of areas certain not be roads) to restrict the possibility of roads growing into areas with an extremely low likelihood of being roads.
+
+This work incorporates their OBIA process with CNN machine learning techniques. First OBIA was used to carry out an initial classification of the region, then these objects were used as samples for a CNN machine learning algorithm. The output of the CNN was then used to re-segmented the image. Next, the resulting segmentation was classified based on the maximum likelihood classifier, from which the road network was extracted. This process increased classification accuracy, automated the process of identifying hilltop roads, and aided the process of filling in gaps in hillside roads.
+
+Some novel findings of this research are:
+\begin{enumerate}[{\bf}]
+\item In order to segment a slope raster objects should completely span roads, because this allows the incorporation of neighboring objects of, for example, higher slope values to be used in the classification of road objects.
+
+\item When attempting to expand the road network through the growth road-classified image objects, the low slope of the road can be used, but this is greatly improved upon by using the values contained in the roads CNN.  
+
+\item Road objects and stream objects are almost identical. At this stage, it is recommended to mask out these objects during post-processing. Although an automated process to remove these is desirable, more research is needed.
+
+\item The output of the CNN appears to highlight road objects that may be producing more sediment. Proportional road surface area has been shown to be positively correlated to sediment discharge \cite{reid}. The heatmaps resulting from the CNN empirically appears to be associating higher road values with road objects of a greater surface area. Future research is needed in understanding if road features in the CNN which have higher values associated with them are producing more sediment and should have a higher remediation priority. If true, it may be possible to adapt the CNN algorithm to make a ‘road order’ map of road objects which have the greatest impact on streams in the region. For this objective more field research would be needed in the measuring of sediment loads being produced from these features.  
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+
+% Only for the journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\funding{This research received no external funding}
+
+\acknowledgments{I would like to thank Shawn Maloney of Point Reyes National Seashore for his help organizing the project and his input on the selection of the study area. I would like to thank Paul Engel of Point Reyes National Seashore for his help accessing the museum containing the historic photos, as well as his help finding the proper photos for the study region. I would like to thank Ben Becker of the Point Reyes National Seashore for his help organizing the project.}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+CNN & Convolutional Neural Network\\
+LiDAR & light detection and ranging\\
+OBIA & Object-based image analysis\\
+DEM & digital elevation model
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\appendixtitles{yes} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+\section[\appendixname~\thesection]{Complete Process Tree}
+
+This is the complete process tree built in eCognition extract the road network.
+
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{appendix1.png}
+\end{figure}   
+
+\begin{figure}[H]
+\includegraphics[width=10.5 cm]{appendix2.png}
+\end{figure}   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\bibliography{my.bib}
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+% \begin{thebibliography}{999}
+% % Reference 1
+% \bibitem[Author1(year)]{ref-journal}
+% Author~1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142--149.
+% % Reference 2
+% \bibitem[Author2(year)]{ref-book1}
+% Author~2, L. The title of the cited contribution. In {\em The Book Title}; Editor 1, F., Editor 2, A., Eds.; Publishing House: City, Country, 2007; pp. 32--58.
+% % Reference 3
+% \bibitem[Author3(year)]{ref-book2}
+% Author 1, A.; Author 2, B. \textit{Book Title}, 3rd ed.; Publisher: Publisher Location, Country, 2008; pp. 154--196.
+% % Reference 4
+% \bibitem[Author4(year)]{ref-unpublish}
+% Author 1, A.B.; Author 2, C. Title of Unpublished Work. \textit{Abbreviated Journal Name} year, \textit{phrase indicating stage of publication (submitted; accepted; in press)}.
+% % Reference 5
+% \bibitem[Author5(year)]{ref-communication}
+% Author 1, A.B. (University, City, State, Country); Author 2, C. (Institute, City, State, Country). Personal communication, 2012.
+% % Reference 6
+% \bibitem[Author6(year)]{ref-proceeding}
+% Author 1, A.B.; Author 2, C.D.; Author 3, E.F. Title of presentation. In Proceedings of the Name of the Conference, Location of Conference, Country, Date of Conference (Day Month Year); Abstract Number (optional), Pagination (optional).
+% % Reference 7
+% \bibitem[Author7(year)]{ref-thesis}
+% Author 1, A.B. Title of Thesis. Level of Thesis, Degree-Granting University, Location of University, Date of Completion.
+% % Reference 8
+% \bibitem[Author8(year)]{ref-url}
+% Title of Site. Available online: URL (accessed on Day Month Year).
+% \end{thebibliography}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}
+
