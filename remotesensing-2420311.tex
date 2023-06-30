@@ -48,7 +48,7 @@
 \articlenumber{0}
 \pubyear{2023}
 \copyrightyear{2023}
-\externaleditor{Academic Editor: {Yanjun Su} %MDPI: Please add this part.
+\externaleditor{Academic Editor: {Yanjun Su} %MDPI: Please add this part. no problem -W
 }
 \datereceived{11 May 2023} 
 \daterevised{6 June 2023} % Comment out if no revised date
@@ -70,10 +70,10 @@
 
 %=================================================================
 
-\Title{Identification of Abandoned Logging Roads in Point Reyes \highlighting{National Seashore}}
+\Title{Identification of Abandoned Logging Roads in Point Reyes National Seashore}
 %MDPI: IMPORTANT INFORMATION: 
-%1. Please ensure that this is the final version that can be published and confirm that you will require no further changes from hereon.
-%2. Please proof on this version as we have already done the English editing and formatting changes. Please do the proofreading with track changes. Do reply all comments and do not delete them. Thank you
+%1. Please ensure that this is the final version that can be published and confirm that you will require no further changes from hereon. !agreed -W
+%2. Please proof on this version as we have already done the English editing and formatting changes. Please do the proofreading with track changes. Do reply all comments and do not delete them. Thank you !agreed -W
 %3. Please provide GA. Graphical abstract is recommended for every manuscript to help readers to comprehend (The detailed requirements for the GA are listed in the email “Please Provide Graphical Abstract”, please pay attention)
 
 
@@ -88,23 +88,26 @@
 
 
 
-\Author{\hl{William T. Wiskes} *\orcidA{}, %MDPI: 1. Please carefully check the accuracy of ALL names and affiliations.
-%2. The name of this author is different from the one submitted online at susy.mdpi.com (William Wiskes). Please confirm which one is correct.
+\Author{William Wiskes *\orcidA{}, %MDPI: 1. Please carefully check the accuracy of ALL names and affiliations.
+%2. The name of this author is different from the one submitted online at susy.mdpi.com (William Wiskes). Please confirm which one is correct. !Either is fine with me, However since you were expecting William Wiskes, I will just use that name -W
  Leonhard Blesius and Ellen Hines \orcidC{}}
 
 
 
-\AuthorNames{William T. Wiskes, Leonhard Blesius and Ellen Hines}
+\AuthorNames{William Wiskes, Leonhard Blesius and Ellen Hines}
 
 
-\AuthorCitation{\hl{Wiskes,} %MDPI: Please carefully check the accuracy of names and affiliations.
- W.T.; Blesius, L.; Hines, E.}
+\AuthorCitation{Wiskes, %MDPI: Please carefully check the accuracy of names and affiliations. !I have now changed -W
+ W.; Blesius, L.; Hines, E.}
 
 
 
 \address[1]{%
-Department of Geography and Environment, San Francisco State University, \hl{1600 Holloway Avenue,} %MDPI: We switched the address order, please confirm.
- San~Francisco,~CA~94132,~USA; lblesius@sfsu.edu (L.B.); ehines@sfsu.edu (E.H.)}
+Department of Geography and Environment, San Francisco State University, 1600 Holloway Avenue, %MDPI: We switched the address order, please confirm. This is fine -W
+ San~Francisco,~CA~94132,~USA; william.wiskes@usda.gov (W.W.); lblesius@sfsu.edu (L.B.)
+ 
+ Estuary \& Ocean Sciences Center, San Francisco State University, Tiburon, CA, USA; ehines@sfsu.edu (E.H.)}
+
 
 % Contact information of the corresponding author
 \corres{\hangafter=1 \hangindent=1.05em \hspace{-0.82em} Correspondence: william.wiskes@usda.gov}
@@ -120,8 +123,8 @@ Department of Geography and Environment, San Francisco State University, \hl{160
 %\conference{} % An extended version of a conference paper
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{Temporary roads are often placed in mountainous regions for logging purposes but then never decommissioned and removed. These abandoned forest roads often have unwanted environmental consequences. They can lead to altered hydrological regimes, excess erosion, and mass wasting events. These events can affect sediment budgets in streams, with negative consequences for anadromous fish populations. Maps of these roads are frequently non-existent; therefore, methods need to be created to identify and locate these roads for decommissioning. Abandoned logging roads in the Point Reyes National Seashore in California, an area partially under heavy forest canopy, were mapped using object-based image processing in concert with machine learning. High-resolution Q1 LiDAR point clouds from 2019 were used to create a bare earth model of the region, from which a slope model was derived. This slope model was then subjected to segmentation algorithms to identify and isolate regions of differing slopes. Regions of differing slopes were then used in a convolutional neural network (CNN), and a maximum likelihood classifier was used to delineate the historic road network %Please check intended meaning has been retained.
-. The accuracy assessment was conducted using historic aerial photos of the state of the region post-logging, along with ground surveys to verify the presence of logging roads in areas of question. This method was successfully able to identify road networks with a precision of 0.991 and an accuracy of 0.992. It was also found that the CNN was able to identify areas of highest disturbance to the slope gradient. This methodology is a valuable tool for decision makers who need to identify areas of high disturbance in order to mitigate adverse effects.}
+\abstract{Temporary roads are often placed in mountainous regions for logging purposes but then never decommissioned and removed. These abandoned forest roads often have unwanted environmental consequences. They can lead to altered hydrological regimes, excess erosion, and mass wasting events. These events can affect sediment budgets in streams, with negative consequences for anadromous fish populations. Maps of these roads are frequently non-existent; therefore, methods need to be created to identify and locate these roads for decommissioning. Abandoned logging roads in the Point Reyes National Seashore in California, an area partially under heavy forest canopy, were mapped using object-based image processing in concert with machine learning. High-resolution Q1 LiDAR point clouds from 2019 were used to create a bare earth model of the region, from which a slope model was derived. This slope model was then subjected to segmentation algorithms to identify and isolate regions of differing slopes. Regions of differing slopes were then used in a convolutional neural network (CNN), and a maximum likelihood classifier was used to delineate the historic road network. %Please check intended meaning has been retained. !Yes this looks good -W
+The accuracy assessment was conducted using historic aerial photos of the state of the region post-logging, along with ground surveys to verify the presence of logging roads in areas of question. This method was successfully able to identify road networks with a precision of 0.991 and an accuracy of 0.992. It was also found that the CNN was able to identify areas of highest disturbance to the slope gradient. This methodology is a valuable tool for decision makers who need to identify areas of high disturbance in order to mitigate adverse effects.}
 
 % Keywords
 \keyword{LiDAR; object-based image analysis; image segmentation; CNN; machine learning; maximum likelihood classifier; feature extraction; aerial photos; forest roads; logging roads} 
@@ -254,7 +257,7 @@ Logging roads present similarly in the data as, and are often confused with, str
 
 \subsection{Segmentation}
 
-\textls[-18]{The first step of object-based classification is the image segmentation process, where pixels are aggregated into groups based on their spectral and spatial patterns \cite{alon}. The goal of segmentation is to reduce heterogeneity and increase the homogeneity of image objects \cite{naggar}. The image is broken down into primitive image objects using segmentation algorithms, which cluster pixels together based on their relative spectral value, shape, and texture~\cite{xu}. Using these primitive image objects, features within the scene can then be extracted \cite{naggar, xu}. Multi-resolution segmentation, within eCognition, has been shown to be one of the most effective methods to categorize complex landscape features into meaningful objects \cite{carreira, naggar, tab}. However, the scale, shape, and compactness parameters are typically determined in a heuristical manner. Scale refers to the size of image objects relative to the scene’s resolution \cite{duan, naggar}. Generally, to avoid over-segmentation or under-segmentation, a scale should be chosen that results in image objects that encompass the entirety of what is being attempted to classify \cite{duan, sherba}. Shape has two components: smoothness and compactness. Smoothness refers to the roughness of the edges of the image objects, and compactness refers to the object’s length versus width \cite{naggar}. For this research, a weight of 0.1 for shape, a compactness of 0.8, and a scale of 11 were found to be the best for this particular site under these particular conditions %Please check intended meaning has been retained.
+\textls[-18]{The first step of object-based classification is the image segmentation process, where pixels are aggregated into groups based on their spectral and spatial patterns \cite{alon}. The goal of segmentation is to reduce heterogeneity and increase the homogeneity of image objects \cite{naggar}. The image is broken down into primitive image objects using segmentation algorithms, which cluster pixels together based on their relative spectral value, shape, and texture~\cite{xu}. The exact parameters used in this process can be found in in Appendix \ref{appendix:a}. Using these primitive image objects, features within the scene can then be extracted \cite{naggar, xu}. Multi-resolution segmentation, within eCognition, has been shown to be one of the most effective methods to categorize complex landscape features into meaningful objects \cite{carreira, naggar, tab}. However, the scale, shape, and compactness parameters are typically determined in a heuristical manner. Scale refers to the size of image objects relative to the scene’s resolution \cite{duan, naggar}. Generally, to avoid over-segmentation or under-segmentation, a scale should be chosen that results in image objects that encompass the entirety of what is being attempted to classify \cite{duan, sherba}. Shape has two components: smoothness and compactness. Smoothness refers to the roughness of the edges of the image objects, and compactness refers to the object’s length versus width \cite{naggar}. For this research, a weight of 0.1 for shape, a compactness of 0.8, and a scale of 11 were found to be the best for this particular site under these particular conditions %Please check intended meaning has been retained. !Yes, this is good thank you -W
 . These numbers, which were arrived at manually, are data-scale-dependent, and if this workflow were applied to LiDAR of a different quality or to a region whose morphology presented in a significantly different way, it is likely that these numbers would have to be adjusted. It is important to remember that the goal of image segmentation is to break an image into homogeneous objects and that specific parameter weights are dependent on the range of values present in the input raster, as well as that raster’s resolution. In this situation, we are particularly interested in arriving at objects that span the complete width of the roads (Figure~\ref{fig4}). Segments that span the entire width of the object being classed can gather the spectral and spatial information of neighboring objects in OBIA \cite{duan, sherba, xu}. Within the study area, objects encompassing undisturbed hillslope areas have a higher slope value than roads that have been graded for logging equipment. With objects that span the entire width of the low-sloped roads, it is possible to use the contextual information from neighboring high-sloped objects in the classification of the road objects. }
 \begin{figure}[H]
 \includegraphics[width=10.5 cm]{segment.png}
@@ -307,8 +310,8 @@ To reclassify the CNN, a threshold was set in the heatmap from which the feature
 \caption{Membership functions in eCognition for maximum likelihood classifier from CNN heatmaps, where item (\textbf{a}) shows road membership, item (\textbf{b}) depicts the candidate class for growing roads into, and item (\textbf{c}) shows the exclusion class. \label{fig6}}
 \end{figure}  
 
-After classification, road seed objects were grown iteratively along the pathways of the CNN to fill in classification gaps and identify hilltop roads until the network had been fully extracted. Since the CNN better identified road objects that were not evident in the slope model, a more complete and better connected road network could be obtained. Figure~\ref{fig7} illustrates the process of extracting this more complete road network. Figure~\ref{fig7}a shows the initial segmentation, \hl{Figure} %MDPI: We changed it to figure citation, please confirm.
-\ref{fig7}b depicts the initial classification, \hl{Figure}~\ref{fig7}c shows the trained neural network's output, and \hl{Figure}~\ref{fig7}d shows the growing process along the neural network~pathways. 
+After classification, road seed objects were grown iteratively along the pathways of the CNN to fill in classification gaps and identify hilltop roads until the network had been fully extracted. Since the CNN better identified road objects that were not evident in the slope model, a more complete and better connected road network could be obtained. Figure~\ref{fig7} illustrates the process of extracting this more complete road network. Figure~\ref{fig7}a shows the initial segmentation, Figure %MDPI: We changed it to figure citation, please confirm. !This is fine with me, thank you -W
+\ref{fig7}b depicts the initial classification, Figure~\ref{fig7}c shows the trained neural network's output, and Figure~\ref{fig7}d shows the growing process along the neural network~pathways. 
 
 \begin{figure}[H]
 \includegraphics[width=12 cm]{classify.png}
@@ -342,7 +345,7 @@ The confusion matrix results from the accuracy assessment are found in Table \re
 
 %%%
 \begin{table}[H]
-\caption{\hl{Confusion} %MDPI: We revised alignment and border line, please confirm.
+\caption{Confusion %MDPI: We revised alignment and border line, please confirm. !I confirm that this looks good to me, thank you -W
  matrix from accuracy assessment.}
 \label{tab1}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
@@ -367,7 +370,7 @@ The confusion matrix results from the accuracy assessment are found in Table \re
 % \usepackage{rotating}
 %\begin{sidewaystable}
 \begin{table}[H]
-\caption{\hl{Formulas} %MDPI: We revised alignment and border line, please confirm.
+\caption{Formulas %MDPI: We revised alignment and border line, please confirm. !I confirm that I am happy with this table, thank you -W
  for understanding the confusion matrix results. TP = true positive, TN = true negative, FP = false positive, and FN = false negative.}
 \label{tab2}
 \begin{adjustwidth}{-\extralength}{0cm}
@@ -394,8 +397,8 @@ The confusion matrix results from the accuracy assessment are found in Table \re
 \midrule
 \text{F1 Score} & 0.9825 & F1 = 2TP/(2TP + FP + FN) \\
 \midrule
-\text{Matthews Correlation Coefficient} & 0.9773 & TP\hl{*}TN %MDPI: Please check if * should be changed to multiplication sign (× $times$)
- $-$ FP\hl{*}FN/sqrt((TP + FP)\hl{*}(TP + FN)\hl{*}(TN + FP)\hl{*}(TN + FN)) \\
+\text{Matthews Correlation Coefficient} & 0.9773 & TP*TN %MDPI: Please check if * should be changed to multiplication sign (× $times$). !yes this is how its referred to in the primary literature.
+ $-$ FP*FN/sqrt((TP + FP)*(TP + FN)*(TN + FP)*(TN + FN)) \\
 \bottomrule
 \end{tabularx}
 	\end{adjustwidth}
@@ -411,10 +414,10 @@ The goal of this study was to extract historic forest road networks out of LiDAR
 
 The results have shown that roads were able to accurately be identified in LiDAR using OBIA in conjunction with CNNs. Specifically, the results show that OBIA methods can be improved upon using CNNs. CNNs help to increase classification accuracy and automate the extraction methods that, in previous research, had to be processed using non-autonomous methods. The results of this study’s coupled CNN, OBIA approach have minimized these errors, improved classification accuracy, and captured hilltop roads.
 
-When looking at studies of similar areas, such as \hl{Sherba et al. (2014),} %Please cite reference with reference numbers, and place the numbers in square brackets [ ], for example [1], [1-3] or [1,3]， You may refer to the following the website: http://www.mdpi.com/authors/references.
+When looking at studies of similar areas, such as Sherba et al. \cite{sherba}, %Please cite reference with reference numbers, and place the numbers in square brackets [ ], for example [1], [1-3] or [1,3]， You may refer to the following the website: http://www.mdpi.com/authors/references. !This has been updated thank you -W
  pixel-based classification results show that the unsupervised classification of logging roads had a total accuracy of 78\%. They also found that the errors of commission occurred largely on ridgelines where large areas of low slope were present, and errors of omission occurred as gaps in the road network \cite{sherba}. In their paper, when a strictly fully automated OBIA approach was used, an initial classification accuracy of 86\% was found. Additionally, after extracting out misclassified drainages and incorporating in hand-digitized ridge roads, classification accuracy increased to 90\%.
 
-\hl{Sherba et al. (2014)} classified their segmented slope model into two initial classes: roads that were considered ‘certain road objects’, and ‘road candidate objects’, which were roads only if they were near the initial road class. They then grew these road objects into the candidate object class to create a logging road map \cite{sherba}. A major difficulty in this workflow was the time-consuming nature of the task and the lack of automation in its identification of hilltop roads. In order to increase the practicality of road extraction methods, this research effort has also added an exclusion class (of areas certain not be roads) to restrict the possibility of roads growing into areas with an extremely low likelihood of being roads.
+Sherba et al. \cite{sherba} classified their segmented slope model into two initial classes: roads that were considered ‘certain road objects’, and ‘road candidate objects’, which were roads only if they were near the initial road class. They then grew these road objects into the candidate object class to create a logging road map \cite{sherba}. A major difficulty in this workflow was the time-consuming nature of the task and the lack of automation in its identification of hilltop roads. In order to increase the practicality of road extraction methods, this research effort has also added an exclusion class (of areas certain not be roads) to restrict the possibility of roads growing into areas with an extremely low likelihood of being roads.
 
 This work incorporates their OBIA process with CNN machine learning techniques. First, OBIA was used to carry out an initial classification of the region; then, these objects were used as samples for a CNN machine learning algorithm. The output of the CNN was then used to re-segmented the image. Next, the resulting segmentation was classified based on the maximum likelihood classifier, from which the road network was extracted. This process increased classification accuracy, automated the process of identifying hilltop roads, and aided the process of filling in gaps in hillside roads.
 
@@ -435,12 +438,12 @@ Some novel findings of this research are:
 
 
 
-\authorcontributions{\hl{XXX}} %For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used "Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing---original draft preparation, X.X.; writing---review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y. All authors have read and agreed to the published version of the manuscript.'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported}. 
+\authorcontributions{Author Contributions: William Wiskes conceptualized and designed the study, conducted the research, analyzed the data, and wrote the manuscript. Leonhard Blesius and Ellen Hines provided guidance and critical feedback throughout the research process and contributed to the editing and revision of the manuscript} %For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used "Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing---original draft preparation, X.X.; writing---review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y. All authors have read and agreed to the published version of the manuscript.'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported}. 
  %please ensure all authors have been stated
 
 \funding{This research received no external funding.}
 
-\dataavailability{\hl{XXX}} %We encourage all authors of articles published in MDPI journals to share their research data. In this section, please provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study. Where no new data were created, or where data is unavailable due to privacy or ethical re-strictions, a statement is still required. Suggested Data Availability Statements are available in section “MDPI Research Data Policies” at \url{https://www.mdpi.com/ethics}.} 
+\dataavailability{The proprietary nature of the data prevents us from publicly archiving or sharing it at this time. Interested researchers may request access to the data from the Golden Gate National Parks Conservancy. Details on how to obtain access to the data can be obtained by contacting the organization directly. The methodology employed in this study is provided in the Appendix section of the paper.} %We encourage all authors of articles published in MDPI journals to share their research data. In this section, please provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study. Where no new data were created, or where data is unavailable due to privacy or ethical re-strictions, a statement is still required. Suggested Data Availability Statements are available in section “MDPI Research Data Policies” at \url{https://www.mdpi.com/ethics}.} 
 
 \acknowledgments{I would like to thank Shawn Maloney of Point Reyes National Seashore for his help in organizing the project and his input in the selection of the study area. I would like to thank Paul Engel of Point Reyes National Seashore for his help with accessing the museum containing the historic photos, as well as his help with finding the proper photos for the study region. Moreover, I would like to thank Ben Becker of the Point Reyes National Seashore for his help with organizing the project.}
 
@@ -463,22 +466,16 @@ DEM & Digital elevation model
 \appendixtitles{yes} 
 \appendixstart
 \appendix
-\section[\appendixname~\thesection]{\hl{Complete Process Tree}} %MDPI: !!! Please cite Appendix A in the main text.
+\section[\appendixname~\thesection]{Process Tree}\label{appendix:a} %MDPI: !!! Please cite Appendix A in the main text. !This task is now complete -W
 
 
-This is the complete process tree built in the eCognition extract of the road %Please check intended meaning has been retained.
-\hl{network.} %MDPI: Please add figure caption for the two images below if possible, i.e., Figure A1. xxx.  Figure A2. xxx. 
-
-
+ %Please check intended meaning has been retained. !Sentence has been moved to figure caption -W
+%MDPI: Please add figure caption for the two images below if possible, i.e., Figure A1. xxx.  Figure A2. xxx. !They are really both the same figure so I have combined them and added one caption -W
 \begin{figure}[H]
-\includegraphics[width=12 cm]{appendix1.png}
+\includegraphics[width=12 cm]{appendix.png}
+\caption{Complete eCognition process tree to extract the road network. \label{figA}}
 \end{figure}   
-
-\vspace{-12pt}
-
-\begin{figure}[H]
-\includegraphics[width=12 cm]{appendix2.png}
-\end{figure}   
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{adjustwidth}{-\extralength}{0cm}
@@ -492,9 +489,9 @@ This is the complete process tree built in the eCognition extract of the road %P
 \begin{thebibliography}{999}
 
 \bibitem[Becker and Maloney(2020)]{becker}
-Becker, B. \hl{(Affiliation}); %MDPI: please add his Affiliation
-Maloney, S.  \hl{(Affiliation}). %MDPI: please add his Affiliation
-\newblock Personal communication \hl{with leaders of Point Reyes National Seashore}, %%MDPI: please delete it
+Becker, B. (National Park Service, Point Reyes, USA); %MDPI: please add his Affiliation !complete -W
+Maloney, S.  (National Park Service, Point Reyes, USA). %MDPI: please add his Affiliation !complete -W
+\newblock Personal communication, %%MDPI: please delete it !complete -W
 2020. 
 %MDPI: for Personal Communications type reference, please write it with the format: 
 %Author 1 (Affiliation 1); Author 2 (Affiliation 2). Personal communication, Year. 
@@ -527,22 +524,29 @@ Rab, M.A.
 \newblock https://doi.org/10.1016/j.foreco.2003.12.010.
 
 \bibitem[Troendle and King(1985)]{troendle}
-\hl{Troendle,} %MDPI: We removed website link since it's not required in journal type, please confirm.
+Troendle, %MDPI: We removed website link since it's not required in journal type, please confirm. !cofirming this is ok -W
  C.A.; King, R.M.
 \newblock The Effect of Timber Harvest on the Fool Creek Watershed, 30 Years
   Later.
 \newblock {\em Water Resour. Res.} {\bf 1985}, {\em 21},~1915--1922. https://doi.org/10.1029/WR021i012p01915.
 
 \bibitem[Luce and Black(1999)]{luce}
-\hl{Luce,} %MDPI: We removed website link since it's not required in journal type, please confirm.
+Luce, %MDPI: We removed website link since it's not required in journal type, please confirm. !cofirming this is ok -W
  C.H.; Black, T.A.
 \newblock Sediment production from forest roads in western Oregon.
 \newblock {\em Water Resour. Res.} {\bf 1999}, {\em 35},~2561--2570. https://doi.org/10.1029/1999WR900135.
 
 \bibitem[Underwood(2009)]{underwood}
 Underwood, K.R.
-\newblock \hl{The effects of hillslopes on trail degradation Olympic National Park,
-  Washington, 2009.} %MDPI: Please provide more information about the article type, such as book (please provide the name and location of the publisher); online resource (please provide the URL of the website and the date it was accessed (Date Month Year)); or journal article (please provide the name of the journal, the year and volume in which it was published, and the page number). Please refer to https://www.mdpi.com/authors/references for full reference formatting guides.
+\newblock (2009). The Effects of Hillslopes on Trail Degradation Olympic National Park, Washington. University of Arkansas, Fayetteville. %MDPI: Please provide more information about the article type, such as book (please provide the name and location of the publisher); online resource (please provide the URL of the website and the date it was accessed (Date Month Year)); or journal article (please provide the name of the journal, the year and volume in which it was published, and the page number). Please refer to https://www.mdpi.com/authors/references for full reference formatting guides.
+% !complete -W
+% @book{underwood2009effects,
+%   title={The Effects of Hillslopes on Trail Degradation Olympic National Park, Washington},
+%   author={Underwood, K.R.},
+%   url={https://books.google.com/books?id=TRU9QwAACAAJ},
+%   year={2009},
+%   publisher={University of Arkansas, Fayetteville}
+% }
 
 
 \bibitem[Douglas et~al.(1992)Douglas, Spencer, Greer, Bidin, Sinun, and
@@ -569,17 +573,17 @@ Wong, K.; Neo, L.
 
 \bibitem[Kelly and Fox(1995)]{kelly}
 Kelly, J.P.; Fox, K.J.
-\newblock {\em Fish Species of Tomales Bay and Its Watershed}; The Tomales Bay Association: \hl{Point Reyes Station, CA, USA,} %MDPI: Newly added information. Please confirm. The following highlights without comment are the same
+\newblock {\em Fish Species of Tomales Bay and Its Watershed}; The Tomales Bay Association: Point Reyes Station, CA, USA, %MDPI: Newly added information. Please confirm. The following highlights without comment are the same !looks good to me -W
  1995.
 
 \bibitem[Ketcham(2001)]{ketcham}
 Ketcham, B.J.
 \newblock {\em Point Reyes National Seashore Water Quality Monitoring Report, May
-  1999--May 2001}; Point Reyes National Seashore: \hl{Point Reyes Station, CA, USA,} 2001.
+  1999--May 2001}; Point Reyes National Seashore: Point Reyes Station, CA, USA, 2001.
 
 \bibitem[Gronsdahl et~al.(2019)Gronsdahl, Moore, Rosenfeld, McCleary, and
   Winkler]{gronsdahl}
-\hl{Gronsdahl,} %MDPI: We removed website link since it's not required in journal type, please confirm.
+Gronsdahl, %MDPI: We removed website link since it's not required in journal type, please confirm. !I confirm that this is fine - W
  S.; Moore, R.D.; Rosenfeld, J.; McCleary, R.; Winkler, R.
 \newblock Effects of forestry on summertime low flows and physical fish habitat
   in snowmelt-dominant headwater catchments of the Pacific Northwest.
@@ -601,7 +605,7 @@ Baxter, C.V.; Frissell, C.A.; Hauer, F.R.
   1999}, {\em 128},~854--867. https://doi.org/10.1577/1548-8659(1999)128<0854:GLRATD>2.0.CO;2.
 
 \bibitem[Dan~Moore and Wondzell(2005)]{moore}
-\hl{Dan~Moore,} %MDPI: We removed website link since it's not required in journal type, please confirm.
+Dan~Moore, %MDPI: We removed website link since it's not required in journal type, please confirm.  !I confirm that this is fine - W
  R.; Wondzell, S.
 \newblock Physical hydrology and the effects of forest harvesting in the
   Pacific Northwest: A review.
@@ -628,8 +632,8 @@ Li, Y.; Yong, B.; Wu, H.; An, R.; Xu, H.
 \bibitem[Lillesand et~al.(2015)Lillesand, Kiefer, and Chipman]{lillesand}
 Lillesand, T.M.; Kiefer, R.W.; Chipman, J.W.
 \newblock {\em Remote Sensing and Image Interpretation}, 7th ed.;
-  John Wiley \& Sons, Inc.: Hoboken, NJ, USA, 2015; pp. \hl{xii, 720.} %MDPI: Please provide the correct page number.
-
+  John Wiley \& Sons, Inc.: Hoboken, NJ, USA, 2015; pp. xii, 720. %MDPI: Please provide the correct page number.
+%!these are the correct pages, I am citing those two pages in this book, xii is a page in the introduction, if this is a problem we can remove this page and use strictly page 720 as they are covering a similar topic -W 
 
 \bibitem[Mena(2003)]{mena}
 Mena, J.
@@ -646,7 +650,7 @@ Wang, W.; Yang, N.; Zhang, Y.; Wang, F.; Cao, T.; Eklund, P.
 
 \bibitem[Yucong and Saripalli(2012)]{yucong}
 Yucong, L.; Saripalli, S.
-\newblock Road detection from aerial imagery. \hl{In Proceedings of the 2012 IEEE International Conference on Robotics and Automation, St. Paul, MN, USA, 14--18 May} 2012.
+\newblock Road detection from aerial imagery. In Proceedings of the 2012 IEEE International Conference on Robotics and Automation, St. Paul, MN, USA, 14--18 May 2012. %!this is acceptable -W 
 \newblock https://doi.org/10.1109/ICRA.2012.6225112.
 
 
@@ -655,12 +659,12 @@ Yucong, L.; Saripalli, S.
 \bibitem[Stoker and Young(2016)]{stoker}
 Stoker, J.M.; Brock, J.C.; Soulard, C.E.; Ries, K.G.; Sugarbaker, L.; Newton, W.E.; Haggerty, P.K.; Lee, K.E.; Young, J.A.
 \newblock {\em USGS Lidar Science Strategy---Mapping the Technology to the Science:
-  U.S. Geological Survey Open-File Report 2015}; \hl{US Department of the Interior, US Geological Survey: Washington, DC, USA,} 2016; Volume 1209, p. 33. https://doi.org/10.3133/ofr20151209.
+  U.S. Geological Survey Open-File Report 2015}; US Department of the Interior, US Geological Survey: Washington, DC, USA, 2016; Volume 1209, p. 33. https://doi.org/10.3133/ofr20151209. %!this is acceptable -W 
 
 \bibitem[Preetha et~al.(2012)Preetha, Suresh, and Bosco]{preetha}
 Preetha, M.M.S.J.; Suresh, L.P.; Bosco, M.J.
-\newblock Image segmentation using seeded region growing. \hl{In Proceedings of the 2012 International Conference on Computing, Electronics and Electrical Technologies (ICCEET), Nagercoil, India, 21--22 March} 2012.
-\newblock https://doi.org/10.1109/ICCEET.2012.6203897.
+\newblock Image segmentation using seeded region growing. In Proceedings of the 2012 International Conference on Computing, Electronics and Electrical Technologies (ICCEET), Nagercoil, India, 21--22 March 2012.
+\newblock https://doi.org/10.1109/ICCEET.2012.6203897. %!this is acceptable -W 
 
 \bibitem[Khatami et~al.(2016)Khatami, Mountrakis, and Stehman]{khatami}
 Khatami, R.; Mountrakis, G.; Stehman, S.V.
@@ -725,7 +729,7 @@ Robson, B.A.; Bolch, T.; MacDonell, S.; Hölbling, D.; Rastner, P.; Schaffer,
 \bibitem[Council et~al.(2009)Council, Studies, Life, Board, on~Best
   Practices~for Shellfish~Mariculture, and the Effects~of
   Commercial~Activities]{council}
-\hl{National Research Council; Division on Earth and Life Studies; Ocean Studies Board; Committee on Best Practices for Shellfish Mariculture and the Effects of Commercial Activities in Drakes Estero, Pt. Reyes National Seashore, California.} %MDPI: We revised it to full name following google scholar, please confirm.
+National Research Council; Division on Earth and Life Studies; Ocean Studies Board; Committee on Best Practices for Shellfish Mariculture and the Effects of Commercial Activities in Drakes Estero, Pt. Reyes National Seashore, California. %MDPI: We revised it to full name following google scholar, please confirm.  !I confirm that this is fine - W
 \newblock {\em Shellfish Mariculture in Drakes Estero, Point Reyes National
   Seashore, California}; National Academies Press: Washington, DC, USA, 2009.
 
@@ -738,22 +742,22 @@ Livingston, D.
   Department of the Interior: San Francisco, CA, USA, 1995.
 
 \bibitem[Quantum~Spatial(2019)]{quantum}
-\hl{Quantum Spatial Inc.} %MDPI: We revised it to full name, please confirm.
-\newblock {\em Marin County, California QL1 LiDAR: Technical Data Report}; \hl{Quantum Spatial Inc.:}
+Quantum Spatial Inc. %MDPI: We revised it to full name, please confirm. %!I confirm -W 
+\newblock {\em Marin County, California QL1 LiDAR: Technical Data Report}; Quantum Spatial Inc.:
 \newblock Corvallis, OR, USA, 2019.
 
 \bibitem[ESRI(2020)]{esri}
 ESRI.
-\newblock ArcGIS Pro: Version 2.7. 2020. Available online: \url{https://support.esri.com/en/technical-article/000012500} \hl{(accessed on).} %MDPI: Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+\newblock ArcGIS Pro: Version 2.7. 2020. Available online: \url{https://support.esri.com/en/technical-article/000012500} (11 May 2023). %MDPI: Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020. !this is complete -W
 
 
 \bibitem[eCognition(2020)]{ecog}
-eCognition. Version 10. 2020. Available online: \url{https://geospatial.trimble.com/} \hl{(accessed on).}
+eCognition. Version 10. 2020. Available online: \url{https://geospatial.trimble.com/} (11 May 2023). %!this is complete -W 
 
 \bibitem[Alon et~al.(2019)Alon, Festijo, and Juanico]{alon}
 Alon, A.S.; Festijo, E.D.; Juanico, D.E.O.
 \newblock An Object-Based Supervised Nearest Neighbor Method for Extraction of
-  Rhizophora in Mangrove Forest from LiDAR Data and Orthophoto. \hl{In Proceedings of the 2019 IEEE 9th International Conference on System Engineering and Technology (ICSET), Shah Alam, Malaysia, 7 October} 2019.
+  Rhizophora in Mangrove Forest from LiDAR Data and Orthophoto. In Proceedings of the 2019 IEEE 9th International Conference on System Engineering and Technology (ICSET), Shah Alam, Malaysia, 7 October 2019. %!this is acceptable -W 
 \newblock https://doi.org/10.1109/ICSEngT.2019.8906397.
 
 \bibitem[El-naggar(2018)]{naggar}
@@ -773,8 +777,8 @@ Xu, J.; Luo, C.; Chen, X.; Wei, S.; Luo, Y.
 \bibitem[Carreira{-}Perpi{\~{n}}{\'{a}}n(2015)]{carreira}
 Carreira{-}Perpi{\~{n}}{\'{a}}n, M.{\'{A}}.
 \newblock A review of mean-shift algorithms for clustering.
-\newblock {\em \hl{arXiv}} {\bf 2015}, \hl{arXiv:1503.00687.} %MDPI: We revised it following scholar, please confirm.
-
+\newblock {\em arXiv} {\bf 2015}, arXiv:1503.00687. %MDPI: We revised it following scholar, please confirm.
+%!this is acceptable -W 
 
 \bibitem[Tab et~al.(2006)Tab, Naghdy, and Mertins]{tab}
 Tab, F.A.; Naghdy, G.; Mertins, A.
@@ -792,7 +796,7 @@ Duan, G.; Zhang, J.; Zhang, S.
 \bibitem[Navulur(2007)]{navulur}
 Navulur, K.
 \newblock {\em Multispectral Image Analysis Using the Object-Oriented
-  Paradigm}; CRC Press/Taylor \& Francis: Boca Raton, NJ, USA, 2007; \hl{pp. 24, 165.} %MDPI: Please check if page number is correct, if it should be page range 24--165.
+  Paradigm}; CRC Press/Taylor \& Francis: Boca Raton, NJ, USA, 2007; pp. 24, 165. %MDPI: Please check if page number is correct, if it should be page range 24--165. %!no, this should not be a range, I am citing those two pages in this book -W 
 
 
 \bibitem[Prakash et~al.(2020)Prakash, Manconi, and Loew]{prakash}
@@ -845,7 +849,7 @@ Zhen, Z.; Quackenbush, L.; Zhang, L.
 
 \bibitem[eCognition(2023)]{ecogcnn}
 eCognition.
-\newblock Using Deep Learning Models. 2023.  Available online: \url{https://tinyurl.com/3we9rfvr} \hl{(accessed on).}
+\newblock Using Deep Learning Models. 2023.  Available online: \url{https://tinyurl.com/3we9rfvr} (11 May 2023). %!this is complete -W 
 
 \bibitem[Timilsina et~al.(2020)Timilsina, Aryal, and Kirkpatrick]{timilsina}
 Timilsina, S.; Aryal, J.; Kirkpatrick, J.B.
@@ -856,8 +860,8 @@ Timilsina, S.; Aryal, J.; Kirkpatrick, J.B.
 
 \bibitem[Richards(2013)]{richards}
 Richards, J.A.J.A.
-\newblock {\em Remote Sensing Digital Image Analysis: An Introduction}, 5th ed.; Springer:  \hl{Berlin/Heidelberg, Germany,} 
-2013.
+\newblock {\em Remote Sensing Digital Image Analysis: An Introduction}, 5th ed.; Springer:  Berlin/Heidelberg, Germany,
+2013. %!this is acceptable -W 
 
 \bibitem[Lewandowicz and Flisek(2020)]{lewandowicz}
 Lewandowicz, E.; Flisek, P.
@@ -908,7 +912,7 @@ Yang, M.D.; Tseng, H.H.; Hsu, Y.C.; Tsai, H.P.
 \newblock https://doi.org/10.3390/rs12040633.
 
 \bibitem[Reid and Dunne(1984)]{reid}
-\hl{Reid,} %MDPI: We removed website link since it's not required in journal type, please confirm.
+Reid, %MDPI: We removed website link since it's not required in journal type, please confirm.  !I confirm that this is fine - W
  L.M.; Dunne, T.
 \newblock Sediment production from forest road surfaces.
 \newblock {\em Water Resour. Res.} {\bf 1984}, {\em 20},~1753--1761. https://doi.org/10.1029/WR020i011p01753.
